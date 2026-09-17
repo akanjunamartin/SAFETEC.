@@ -1,0 +1,412 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222222;
+            background: #faf5f7;
+        }
+
+        /* HEADER */
+        header {
+            background: #072b20;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #f5c542;
+        }
+
+        .logo span {
+            color: rgba(255, 255, 255, 0.082);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.411);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f5c542;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 85vh;
+            background:
+                linear-gradient(rgba(3, 18, 31, 0.78), rgba(3, 18, 31, 0.78)),
+                url("images/security.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+            color: #f5c542;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #071a2b;
+            padding: 14px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #071a2b;
+            margin-bottom: 12px;
+        }
+
+        .section-title .line {
+            width: 70px;
+            height: 4px;
+            background: #f5c542;
+            margin: auto;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 380px;
+            background:
+                linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url("images/about-security.jpg") center/cover no-repeat;
+            border-radius: 10px;
+        }
+
+        .about-text h3 {
+            color: #071a2b;
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-text ul {
+            list-style: none;
+        }
+
+        .about-text li {
+            margin-bottom: 18px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .about-text li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f5c542;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* SERVICES */
+        .services {
+            background: #eef2f5;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: #071a2b;
+            color: #f5c542;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .service-card h3 {
+            color: #071a2b;
+            margin-bottom: 12px;
+        }
+
+        /* GALLERY */
+        .gallery {
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #ddd;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #071a2b;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: #102b42;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .contact-card .icon {
+            font-size: 35px;
+            color: #f5c542;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+            color: #f5c542;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: #f5c542;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #03101d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .footer-highlight {
+            color: #f5c542;
+        }
+
+        /* MOBILE MENU */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                padding-top: 20px;
+            }
+
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .service-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+        }
+ 
